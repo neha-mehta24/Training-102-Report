@@ -1,0 +1,94 @@
+
+<%@taglib prefix="s" uri="/struts-tags"%>
+<title>Seven Hills Hospital</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+     
+      <img width=220 height="104" src="images/logo.png" alt="logo">
+     
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li  ><a href="aboutus.html">About Us</a></li>
+          <li ><a href="meet_doc.html">Meet Our Doctor</a></li>
+         
+         <li><a href="#">Medical Services</a>
+            <ul>
+              <li><a href="skin_allergy.html">Allergic Skin Diseases</a></li>
+              <li><a href="alzheimer.html">Alzheimer Disease</a>
+
+              </li>
+              <li><a href="back_pain.html">Back Pain</a></li>
+               <li><a href="breast_cancer.html">Breast cancer</a></li>
+              <li><a href="cardiology.html">Cardiology</a></li>
+               <li><a href="diabetes.html">Diabetes</a></li>
+              <li><a href="ent.html">ENT</a></li>
+               <li><a href="gynacology.html">Gynecology</a></li>
+              <li><a href="heart.html">Heart Surgery</a></li>
+             <li><a href="kidney_transplant.html">Kidney Transplant</a></li>
+            </ul>
+          </li>
+         
+          <li ><a href="login.html">Log In</a></li>
+          <li><a href="contact_us.html">Contact Us</a></li>
+          <li class="selected"><a href="signup.html">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+      <div id="site_content">
+      <div class="gallery">
+        <img width="1050" height="250" src="images/register.jpg" />
+      </div> 
+<div class="content2">
+
+<s:head theme="simple"/></head>
+<center><s:actionmessage/></center>
+<table align="center"><tr><td><h1 align="center">New Registration</h1>
+
+    <tr><td><s:form action="signup" cssClass="form_settings">
+    <s:textfield name="u_id" label="Patient Id" size="15"/>
+
+  <s:textfield name="username" label="User Name" size="15" />
+
+  <s:password name="password" label="Password" size="15" />
+
+   <s:password name="cpassword" label="Confirm Password" size="15" />   
+   <s:select name="type" label="Type" list="{'patient'}"/>
+
+  <s:textfield name="fullname" label="Name" size="25" />
+
+  <s:textfield name="dob" label="Date Of Birth" size="25" />
+
+  <s:select name="ques" label="Security Question" list="{'What is your lucky number','What is your favourite color','What is your nick name'}"/>
+
+  <s:textfield name="answer" label="Security Answer" size="15"/>
+
+   <s:textfield name="age" label="Age" size="25" />
+   
+  <s:select name="sex" label="Sex" list="{'Male','Female'}"/>
+
+  
+  <s:textarea name="address" label="Address" rows="4" cols="20"/>
+
+  <s:textfield label="Country" name="country" size="25" />
+  <s:textfield label="State" name="state" size="25" />
+  <s:textfield label="City" name="city" size="25" />
+   <s:textfield label="Contact no" name="contactno" size="25" />
+
+  <s:textfield label="Email" name="email" size="25" />
+
+  <s:submit value="Sign Up" cssClass="submit" align="center"/>
+ 
+</s:form>
+
+</table>
+         
+    </div>
+    </div>
+   <%@include file="footer.html" %>

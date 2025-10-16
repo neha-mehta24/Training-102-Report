@@ -1,0 +1,246 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <include file="example.xml"/>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="LoginAction" class="com.action.LoginAction">
+		<result name="input">/login.jsp</result>
+                <result name="error">/patient_home.jsp</result>
+		<result name="success">/admin_home.jsp</result>
+                <result name="login">/doctor_home.jsp</result>
+	</action>
+        <action name="signup" class="mypack.Signup">
+		<result name="input">/signup.jsp</result>
+                <result name="error">/login.jsp</result>
+		<result name="success">/signup.jsp</result>
+	</action>
+        
+        <action name="medicineAction" class="mypack.MedicineAction">
+		<result name="input">/medicine_master.jsp</result>
+                <result name="error">/admin_home.jsp</result>
+		<result name="success">/medicine_master.jsp</result>
+                
+	</action> 
+        <action name="doctorAction" class="mypack.DoctorAction">
+		<result name="input">/doctor_master.jsp</result>
+                <result name="error">/admin_home.jsp</result>
+		<result name="success">/doctor_master.jsp</result>
+	</action>
+        
+        <action name="departmentAction" class="mypack.DepartmentAction">
+		<result name="input">/department.jsp</result>
+                <result name="error">/admin_home.jsp</result>
+		<result name="success">/department.jsp</result>
+	</action>
+         <action name="diseaseAction" class="mypack.DiseaseAction">
+		<result name="input">/disease_master.jsp</result>
+                <result name="error">/admin_home.jsp</result>
+		<result name="success">/disease_master.jsp</result>
+	</action>
+       <action name="patientAction" class="mypack.PatientAction">
+		<result name="input">/patient_master.jsp</result>
+                <result name="error">/admin_home.jsp</result>
+		<result name="success">/patient_master.jsp</result>
+	</action>
+        <action name="appointmentAction" class="mypack.AppointmentAction">
+		<result name="input">/appointment_master.jsp</result>
+                <result name="error">/admin_home.jsp</result>
+		<result name="success">/appointment_master.jsp</result>
+	</action>
+                <action name="moddepartment" class="mypack.ModAction" method="mod1">
+        <result name="success">/moddepartment.jsp</result>    
+        </action>
+        
+        <action name="moddepartment1" class="mypack.ModAction" method="mod2">
+        <result name="success">/moddepartment1.jsp</result>    
+        </action>
+        <action name="moddepartmentAction" class="mypack.ModAction" method="mod3">
+        <result name="success">/moddepartment1.jsp</result>    
+        </action> 
+        <action name="deldepartment" class="mypack.DelAction" method="del1">
+        <result name="success">/deldepartment.jsp</result>    
+        </action>
+        
+        <action name="deldepartment1" class="mypack.DelAction" method="del2">
+        <result name="success">/deldepartment.jsp</result>    
+        </action>
+        <action name="deldoctor" class="mypack.deldoctor" method="deldoc1">
+        <result name="success">/deldoctor.jsp</result>    
+        </action>
+        
+        <action name="deldoctor1" class="mypack.deldoctor" method="deldoc2">
+        <result name="success">/deldoctor.jsp</result>    
+        </action>
+        <action name="delMedicine" class="mypack.delmed" method="del1">
+        <result name="success">/delmed.jsp</result>    
+        </action>
+        
+        <action name="delmed1" class="mypack.delmed" method="del2">
+        <result name="success">/delmed.jsp</result>    
+        </action>
+        <action name="modMedicine" class="mypack.modMed" method="mod1">
+        <result name="success">/modmed.jsp</result>    
+        </action>
+        
+        <action name="modmedicine1" class="mypack.modMed" method="mod2">
+        <result name="success">/modmed1.jsp</result>    
+        </action>
+        <action name="modmedicineAction" class="mypack.modMed" method="mod3">
+        <result name="success">/modmed1.jsp</result>    
+        </action> 
+        
+        <action name="moddoctor" class="mypack.moddoctor" method="mod1">
+        <result name="success">/moddoctor.jsp</result>    
+        </action>
+        
+        <action name="moddoctor1" class="mypack.moddoctor" method="mod2">
+        <result name="success">/moddoctor1.jsp</result>    
+        </action>
+        <action name="moddoctorAction" class="mypack.moddoctor" method="mod3">
+        <result name="success">/moddoctor1.jsp</result>    
+        </action> 
+        
+        <action name="delPatient" class="mypack.delpat" method="del1">
+        <result name="success">/delpat.jsp</result>    
+        </action>
+        
+        <action name="delpat1" class="mypack.delpat" method="del2">
+        <result name="success">/delpat.jsp</result>    
+        </action>
+        
+        <action name="deldisease" class="mypack.deldis" method="del1">
+        <result name="success">/deldis.jsp</result>    
+        </action>
+        
+        <action name="deldis1" class="mypack.deldis" method="del2">
+        <result name="success">/deldis.jsp</result>    
+        </action>
+        <action name="delAppointment" class="mypack.delapp" method="del1">
+        <result name="success">/delapp.jsp</result>    
+        </action>
+        
+        <action name="delapp1" class="mypack.delapp" method="del2">
+        <result name="success">/delapp.jsp</result>    
+        </action>
+        
+        <action name="modPatient" class="mypack.modpat" method="mod1">
+        <result name="success">/modpat.jsp</result>    
+        </action>
+        
+        <action name="modpat1" class="mypack.modpat" method="mod2">
+        <result name="success">/modpat1.jsp</result>    
+        </action>
+        <action name="modpatientAction" class="mypack.modpat" method="mod3">
+        <result name="success">/modpat1.jsp</result>    
+        </action> 
+        
+         <action name="moddisease" class="mypack.moddis" method="mod1">
+        <result name="success">/moddis.jsp</result>    
+        </action>
+        
+        <action name="moddis1" class="mypack.moddis" method="mod2">
+        <result name="success">/moddis1.jsp</result>    
+        </action>
+        <action name="moddiseaseAction" class="mypack.moddis" method="mod3">
+        <result name="success">/moddis1.jsp</result>    
+        </action> 
+        <action name="changepasswordAction" class="mypack.changepassword" method="mod3">
+        <result name="success">/change_password.jsp</result>    
+        </action> 
+        <action name="modAppointment" class="mypack.modapp" method="mod1">
+        <result name="success">/modapp.jsp</result>    
+        </action>
+        
+        <action name="modapp1" class="mypack.modapp" method="mod2">
+        <result name="success">/modapp1.jsp</result>    
+        </action>
+        <action name="modappointmentAction" class="mypack.modapp" method="mod3">
+        <result name="success">/modapp1.jsp</result>    
+        </action>
+        <action name="forgetpasswordAction" class="mypack.fp">
+		<result name="success">/sq.jsp</result>
+                <result name="input">/fp.jsp</result>
+                <result name="error">/login.jsp</result>
+                </action>
+                 <action name="SQ" class="mypack.SQu">
+		<result name="success">/password.jsp</result>
+                <result name="input">/sq.jsp</result>
+                <result name="error">/login.jsp</result>
+                </action>
+                <action name="modPatient2" class="mypack.modpat" method="mod1">
+        <result name="success">/doc_med_maintenence.jsp</result>    
+        </action>
+        <action name="modpat2" class="mypack.modpat" method="mod2">
+        <result name="success">/modpat1_1.jsp</result>    
+        </action>
+        <action name="modpatientAction2" class="mypack.modpat" method="mod3">
+        <result name="success">/modpat1_1.jsp</result>    
+        </action> 
+              <action name="appman" class="mypack.appdetails" method="mod1">
+        <result name="success">/doc_appointment_maintenence.jsp</result>    
+        </action>
+         <action name="viewpersonal" class="mypack.viewpersonal" method="mod2">
+        <result name="success">/pat_viewpersonal_details.jsp</result>    
+        </action>
+        <action name="viewdocpersonal" class="mypack.viewdocpersonal" method="mod2">
+        <result name="success">/viewpersonal_details.jsp</result>    
+        </action>
+         
+        <action name="editdoc1" class="mypack.moddoctor" method="mod2">
+        <result name="success">/editdoc.jsp</result>    
+        </action>
+        <action name="editdoc" class="mypack.moddoctor" method="mod3">
+        <result name="success">/editdoc.jsp</result>    
+        </action> 
+         <action name="editpat1" class="mypack.modpat" method="mod2">
+        <result name="success">/editpat.jsp</result>    
+        </action>
+        <action name="editpat" class="mypack.modpat" method="mod3">
+        <result name="success">/editpat.jsp</result>    
+        </action> 
+         <action name="symptomcheck" class="mypack.symptom" method="mod1">
+        <result name="success">/pat_symptom_checker.jsp</result>    
+        </action>
+        
+        <action name="selectdis" class="mypack.symptom" method="mod2">
+        <result name="success">/symptom1.jsp</result>    
+        </action>
+       <action name="checkmed" class="mypack.modMed" method="mod2">
+        <result name="success">/medicine_details.jsp</result>    
+        </action>
+         <action name="doctorlist" class="mypack.listdoc" method="mod1">
+        <result name="success">/listdoc.jsp</result>    
+        </action>
+         <action name="appcl" class="mypack.callapp" method="mod2">
+        <result name="success">/call_appointment.jsp</result>    
+        </action>
+        <action name="appc2" class="mypack.vipatient" method="mod2">
+        <result name="success">/viewpatient_1.jsp</result>    
+        </action>
+        <action name="modpat8" class="mypack.vipatient" method="mod2">
+        <result name="success">/viewpatient_1.jsp</result>    
+        </action>
+        <action name="apaction" class="mypack.reqapp">
+		<result name="input">/pat_req_appointment.jsp</result>
+                <result name="error">/patient_home.jsp</result>
+		<result name="success">/pat_req_appointment.jsp</result>
+	</action>
+        <action name="cancelapp" class="mypack.cancelapp" method="del1">
+        <result name="success">/cancelapp.jsp</result>    
+        </action>
+         <action name="cancelapp1" class="mypack.cancelapp" method="del2">
+        <result name="success">/cancelapp.jsp</result>    
+        </action>
+         <action name="apply" class="mypack.apply" >
+        <result name="success">/appointment_master.jsp</result>    
+        </action>
+          <action name="vpAppointment" class="mypack.delapp" method="view1">
+        <result name="success">/view_app.jsp</result>    
+        </action>
+        
+   
+    </package>
+</struts>

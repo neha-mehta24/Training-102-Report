@@ -1,0 +1,59 @@
+.content1 { 
+  text-align: center;
+  width: 620px;
+  margin: 17px 0 0 0;
+
+  float:right;
+  font-size: 120%;
+}
+
+.content1 ul li, .sidebar1 ul li { 
+  list-style-type: none;
+    background: url(../images/bullet.png) no-repeat;
+  margin: 0 0 0 0; 
+  padding: 0 0 4px 28px;
+  line-height: 1.5em;
+}
+
+.content2 ul li, .sidebar2 ul li { 
+  list-style-type: none;
+    background: url(../images/bullet.png) no-repeat;
+  margin: 0 0 0 0; 
+  padding: 0 0 4px 28px;
+  line-height: 1.5em;
+}
+.content2 { 
+  text-align: justify;
+  width: 1050px;
+  margin: 25px 0 0 0;
+  float:right;
+  font-size: 120%;
+}
+  
+.content1 ul { 
+  margin: 2px 0 22px 0px;
+}
+
+.sidebar1 { 
+  float: left;
+  width: 200px;
+}
+#sidebar_container1 { 
+  float: left;
+  width: 200px;
+  margin-top: 50px;
+
+
+}
+
+.sidebar2 { 
+  float: right;
+  width: 200px;
+}
+#sidebar_container2 { 
+  float: right;
+  width: 200px;
+  margin-top: 50px;
+
+
+}

@@ -1,0 +1,75 @@
+
+<%@taglib prefix="s" uri="/struts-tags"%>
+
+<title>Seven Hills Hospital</title>
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="mystyle.css" />
+<body>
+  <div id="main">
+    <header>
+      <div id="logo">
+     
+      <img width=220 height="104" src="images/logo.png" alt="logo">
+     
+      </div>
+      <nav>
+        <ul class="sf-menu" id="nav">
+          <li><a href="index.html">Home</a></li>
+          <li  ><a href="aboutus.jsp">About Us</a></li>
+          <li><a href="meet_doc.jsp">Meet Our Doctor</a></li>
+         
+         <li ><a href="#">Medical Services</a>
+            <ul>
+              <li><a href="skin_allergy.jsp">Allergic Skin Diseases</a></li>
+              <li class="selected"><a href="alzheimer.jsp">Alzheimer Disease</a>
+
+              </li>
+              <li><a href="back_pain.jsp">Back Pain</a></li>
+               <li><a href="breast_cancer.jsp">Breast cancer</a></li>
+              <li><a href="cardiology.jsp">Cardiology</a></li>
+               <li><a href="diabetes.jsp">Diabetes</a></li>
+              <li><a href="ent.jsp">ENT</a></li>
+               <li><a href="gynacology.jsp">Gynecology</a></li>
+              <li><a href="heart.jsp">Heart Surgery</a></li>
+             <li><a href="kidney_transplant.jsp">Kidney Transplant</a></li>
+            </ul>
+          </li>
+         
+          <li><a href="login.jsp">Log In</a></li>
+          <li><a href="contact_us.jsp">Contact Us</a></li>
+          <li><a href="signup.jsp">Register</a></li>
+        </ul>
+      </nav>
+    </header>
+      <div id="site_content">
+      <div class="gallery">
+          <img width="1050" height="250" src="images/alzimer.jpg"  />
+       
+      </div>
+     
+<div class="content2">
+
+<center>
+ <h2 font-size="20">Alzheimer Diseases</h2></center>
+     <p>At Seven hills for Alzheimer's Care Imaging and Research,
+we are dedicated to diagnosing and caring for Alzheimer?s and related memory disorders and
+finding more effective treatments for these devastating conditions. The Center works to raise
+dementia care standards by empowering patients, caregivers and physicians with the most current
+knowledge available, including the latest advances in research.</p>
+ <p>Each patient who visits CACIR receives care from a team of dementia experts,
+who work closely to provide definitive diagnosis and a personalized management plan.
+The Center employs state-of-the-art diagnostic methods such as positron emission tomography (PET)
+imaging to help distinguish between the many different causes of dementia.</p>
+ <hr>
+<h3 style="font-family:'MS Serif', 'New York', serif;">Recommended Doctors</h3>
+<ul>
+    <li><strong>Name: </strong> Dr. Jordan Zeus<br>
+        <strong>Specialities: Alzheimer Diseases, Dementia, Concussion </strong> </li>
+
+    <li><strong>Name: </strong> Dr. Neha Tondon<br>
+        <strong>Specialities:</strong> Alzheimer Diseases, Cognitive disorders  </li>
+</ul>
+    </div>
+    </div>
+   <%@include file="footer.jsp" %>

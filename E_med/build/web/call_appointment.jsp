@@ -1,0 +1,33 @@
+<%@ taglib uri="/struts-tags" prefix="s" %>
+
+<%@include file="doc_header.jsp" %>
+ <%@include file="a_slider.jsp" %> 
+  <link rel="stylesheet" type="text/css" href="mystyle.css" />
+<div class="content2">
+    <br><br>
+<h2 align="center">Call Appointment</h2>
+<table border="2" align="center">
+    <tr><td>
+            <s:form  cssClass="form_settings">
+
+  
+  <s:textfield name="patient_id" label="Patient Id" size="15" />
+  <s:textfield name="p_name" label="Patient Name" size="15" />  
+  <s:textfield name="age" label="Age" size="15" />
+  <s:textfield name="sex" label="Sex" size="15" />
+   
+  <s:textfield name="appointment_id" label="Appointment Id" size="15" />
+  <s:textarea name="description_test" label="Description Test" rows="10" cols="15" />
+<s:textfield name="result" label="Result" size="15" />
+  <s:textfield name="visit_date" label="Visit Date" size="25" />
+
+   <s:textfield name="visit_time" label="Visit Time" size="15"/>
+
+    
+
+</s:form>
+            <tr><td>  <a href="doctor_home.jsp"><center>Cancel</center></a></td></tr>
+ </table>
+
+</div></div>
+  <%@include file="a_footer.jsp" %>

@@ -1,0 +1,45 @@
+<%@taglib prefix="s" uri="/struts-tags"%>
+
+<%@include file="a_header.html" %>
+ <%@include file="a_slider.html" %> 
+ 
+ <%@page import="java.sql.*" %>
+ 
+  <link rel="stylesheet" type="text/css" href="mystyle.css" />
+  
+<div class="content2">
+    <center><h2> Appointment Requests</h2></center>
+    <table align="center" border="2">
+        <tr>
+            <th>Patient id <th>Disease<th>Medicine taken<th>Emergency Level<th>Suit Date<th>Apply<th>Delete
+        
+      <%
+        mypack.conn c1 = new mypack.conn();
+        ResultSet rs = c1.execute("select * from patient_medicine_disease");
+        while(rs.next())
+        {
+            
+        String pid = rs.getString("patient_id");
+        String dis = rs.getString("disease");
+        String dt = rs.getString("suit_date");
+        
+%>      
+            
+            
+        <tr>
+            <td><%=pid%></td><td><%=dis%>
+            <td><%=rs.getString("Medicine")%></td>
+            <td><%=rs.getString("emergency_level")%></td>
+            <td><%=rs.getString("suit_date")%></td>
+   <td><a href="apply.action?pid=<%=pid%>">Apply</a></td>
+       <td><a href="delappointment.html?pid=<%=pid%>">Delete</a></td>
+             
+        </tr>
+              <%
+           }  %>
+                
+    </table>
+                
+                
+                
+                <%@include file="a_footer.html" %>
